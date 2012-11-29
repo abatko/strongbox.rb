@@ -15,7 +15,10 @@ into an unencrypted text document file or sharing via email, Skype, etc.
 **This Ruby script** (`strongbox.rb`) enables decrypting and reading Strongbox
 files from the command line. It depends on the gems
 [strongboxio](https://github.com/abatko/strongboxio) (for decrypting and
-reading Strongbox files) and `highline` (for command-line i/o).
+reading Strongbox files) and `highline` (for command-line i/o). `strongboxio`
+itself depends on `openssl` (for decryption), `zlib` (for decompression),
+`base64` (for decoding), and `nokogiri` (for xml parsing).
+
 
 Setup
 -----
@@ -23,8 +26,8 @@ Setup
  * `gem install strongboxio`
  * `gem install highline openssl zlib base64 nokogiri` # the dependencies
  * download this Ruby script (`strongbox.rb`)
- * mv ~/Downloads/strongbox.rb ~/bin/ # place this script in a suitable directory
- * chmod u+x ~/bin/strongbox.rb # give yourself permission to execute this script
+ * `mv ~/Downloads/strongbox.rb ~/bin/` # place this script in a suitable directory
+ * `chmod u+x ~/bin/strongbox.rb` # give yourself permission to execute this script
 
 Examples
 --------
