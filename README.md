@@ -1,7 +1,7 @@
 Strongbox.rb
 ============
 
-Ruby script for decrypting and reading www.Strongbox.io files from the command line
+A command-line Ruby program for decrypting and reading www.Strongbox.io files
 
 Description
 -----------
@@ -12,7 +12,7 @@ home: passwords, credentials, credit card & account numbers, encryption keys,
 certificates, etc. - essentially, anything we're not comfortable simply putting
 into an unencrypted text document file or sharing via email, Skype, etc.
 
-**This Ruby script** (`strongbox.rb`) enables decrypting and reading Strongbox
+**This Ruby program** (`strongbox.rb`) enables decrypting and reading Strongbox
 files from the command line. It depends on the gems
 [strongboxio](https://github.com/abatko/strongboxio) (for decrypting and
 reading Strongbox files) and `highline` (for command-line i/o). `strongboxio`
@@ -23,16 +23,15 @@ itself depends on `openssl` (for decryption), `zlib` (for decompression),
 Setup
 -----
 
- * `gem install strongboxio`
- * `gem install highline openssl zlib base64 nokogiri` # the dependencies
- * download this Ruby script (`strongbox.rb`)
- * `mv ~/Downloads/strongbox.rb ~/bin/` # place this script in a suitable directory
- * `chmod u+x ~/bin/strongbox.rb` # give yourself permission to execute this script
+ * `gem install strongboxio highline openssl zlib base64 nokogiri` # install the dependencies
+ * `curl -O https://raw.github.com/abatko/strongbox.rb/master/strongbox.rb` # download this Ruby program
+ * `mv ~/Downloads/strongbox.rb ~/bin/` # place this program in a suitable directory
+ * `chmod u+x ~/bin/strongbox.rb` # give yourself permission to execute this program
 
 Examples
 --------
 
-These examples assume `strongbox.rb` is executable and in a directory in PATH.
+These examples assume `strongbox.rb` is executable and in a directory in `PATH`.
 
     $ strongbox.rb 
     Usage /Users/abatko/bin/strongbox.rb input.sbox
